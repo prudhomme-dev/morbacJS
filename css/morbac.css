@@ -246,7 +246,11 @@ GAME GRID
     font-size: clamp(2.5rem, 12vw, 4rem);
     font-weight: 700;
     color: transparent;
-    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        filter 0.3s ease;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -267,16 +271,20 @@ GAME GRID
     animation: pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.choicePlayer1::before {
-    content: "\2715";
-    color: var(--player-x);
-    text-shadow: 0 0 24px var(--player-x-soft);
+.choicePlayer1 {
+    background-image: url("https://api.iconify.design/mdi/bug.svg?color=%2300d4ff&width=80");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% 60%;
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
 }
 
-.choicePlayer2::before {
-    content: "\25CB";
-    color: var(--player-o);
-    text-shadow: 0 0 24px var(--player-o-soft);
+.choicePlayer2 {
+    background-image: url("https://api.iconify.design/mdi/bug.svg?color=%23ff3d80&width=80");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% 60%;
+    filter: drop-shadow(0 0 10px rgba(255, 61, 128, 0.5));
 }
 
 .winning {
