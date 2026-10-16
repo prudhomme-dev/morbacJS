@@ -87,9 +87,10 @@ const fireConfetti = () => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
     if (window.confetti && !reduceMotion) {
         confetti({
-            particleCount: 120,
-            spread: 70,
-            origin: { y: 0.6 }
+            particleCount: 150,
+            spread: 90,
+            origin: { y: 0.6 },
+            colors: ["#00ffff", "#ff00ff", "#ffff00", "#f0e6ff"]
         })
     }
 }
