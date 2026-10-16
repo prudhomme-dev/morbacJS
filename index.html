@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/morbac.css">
-    <title>Morpion</title>
+    <title>Morbac · Morpion moderne</title>
 </head>
 
 <body>
@@ -15,35 +18,40 @@
         <section>
             <h1>Morbac</h1>
 
-            <div class="players flex">
-                <div class="player">
-                    <h3 class="player1" data-player="1">Joueur 1</h3>
+            <div class="players">
+                <div class="player" data-player="1">
+                    <h3 class="player1">Joueur 1</h3>
                     <h4 class="score">0</h4>
 
                 </div>
-                <div class="player">
-                    <h3 class="player2 playerActive" data-player="2">Joueur 2</h3>
+                <div class="player" data-player="2">
+                    <h3 class="player2">Joueur 2</h3>
                     <h4 class="score">0</h4>
                 </div>
             </div>
 
-            <div class="game flex">
-
-                <div class="case"></div>
-                <div class="case"></div>
-                <div class="case"></div>
-                <div class="case"></div>
-                <div class="case"></div>
-                <div class="case"></div>
-                <div class="case"></div>
-                <div class="case"></div>
-                <div class="case"></div>
-
+            <div class="game">
+                <div class="win-line" aria-hidden="true"></div>
+                <button class="case" type="button" aria-label="Case 1"></button>
+                <button class="case" type="button" aria-label="Case 2"></button>
+                <button class="case" type="button" aria-label="Case 3"></button>
+                <button class="case" type="button" aria-label="Case 4"></button>
+                <button class="case" type="button" aria-label="Case 5"></button>
+                <button class="case" type="button" aria-label="Case 6"></button>
+                <button class="case" type="button" aria-label="Case 7"></button>
+                <button class="case" type="button" aria-label="Case 8"></button>
+                <button class="case" type="button" aria-label="Case 9"></button>
             </div>
 
-            <div class="winner flex">
-                <h2>[Winner]</h2>
-                <button class="reset" title="Relancer une partie"></button>
+            <div class="winner">
+                <h2 aria-live="polite">[Winner]</h2>
+                <button class="reset" type="button" aria-label="Nouvelle partie" title="Nouvelle partie">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="23 4 23 10 17 10" />
+                        <polyline points="1 20 1 14 7 14" />
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                    </svg>
+                </button>
 
             </div>
 
@@ -51,7 +59,9 @@
 
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="js/morbac.js"></script>
+
 </body>
-<script src="js/morbac.js"></script>
 
 </html>
